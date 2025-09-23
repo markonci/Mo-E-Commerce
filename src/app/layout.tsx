@@ -8,6 +8,7 @@ import  { Toaster } from "react-hot-toast";
 import MySessionProvider from "@/MySessionProvider/MySessionProvider";
 import  CartContextProvider  from "@/context/CartContext";
 import WishlistContextProvider from "@/context/WishlistContext";
+import Footer from "./(components)/_footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
                               <CartContextProvider>
               <Navbar />
               {children}
+              <Footer/>
           <Toaster />
 
               </CartContextProvider>

@@ -7,7 +7,7 @@ import { CheckOutschemaType } from "@/schema/CheckOut.schema"
 export default async function Checkoutonline(cartId:string,formvalues:CheckOutschemaType) {
 const token = await getMyToken()
 if(!token)throw new Error('Must Login')
-        const baseUrl =  process.env.NEXTAUTH_URL || "http://localhost:3000";
+        const baseUrl =  process.env.NEXTAUTH_URL || "http://localhost:3000"||'https://mo-e-commerce.vercel.app/';
      const res=await fetch(`${process.env.API}/${cartId}?url=${baseUrl}`,{
     method:'POST',
     headers:{token,

@@ -99,7 +99,7 @@ export default function Checkout() {
         if (res.status === "success") {
           // console.log(res.session.url);
           console.log(res);
-          window.location.href = res.session.url;
+          window.location.href = res?.session?.url;
           toast.success("convert to page payment", {
             duration: 3000,
           });

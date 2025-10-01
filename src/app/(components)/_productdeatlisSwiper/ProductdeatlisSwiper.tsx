@@ -26,6 +26,7 @@ export default function ProductdeatlisSwiper({data}:ProductdeatlisSwiperProps) {
         {data.images?.map((img,i)=>(
 
 <SwiperSlide key={i}>
+              {/* i dy al index mtf2aen any tany rkm dh e al map daymen index */}
               <Image
                 className="w-full  "
                 src={img}

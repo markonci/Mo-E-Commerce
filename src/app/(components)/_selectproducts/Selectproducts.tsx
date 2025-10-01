@@ -12,8 +12,9 @@ export default function Selectproducts({data}:{data:Product}) {
         <div className="flex gap-8  flex-wrap items-center p-3 justify-center  ">
           <div className=" w-full lg:w-[38%] ">
            
-
+              {/* start silder img  */}
             <ProductdeatlisSwiper data={data}/>
+              {/* end silder img  */}
           </div>
           <div className=" w-full lg:w-[57%]">
      

@@ -78,7 +78,9 @@ export default async function Productdetalis({ params }:{params:Promise<{id:stri
 
   return (
     <>
+    {/* start select component  */}
       <Selectproducts data={data}/>
+    {/* end select component  */}
           <div className='dark:bg-[url(/fht6.jpg)]  bg-[url(/rm314-adj-10.jpg)] bg-cover bg-center'>
                       <div className="container w-[90%] md:w-full   mx-auto justify-center gap-2 flex flex-wrap">
           {realtedProducts.data?.map((product) => (

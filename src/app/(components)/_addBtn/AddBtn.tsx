@@ -44,7 +44,7 @@ const [isLoding, setisLoding] = useState(false)
   return (
     <>
     <Button disabled={isLoding} onClick={()=>handleAddButton(id)} className="w-full dark:bg-[#c8550d] dark:hover:bg-red-300  bg-green-400 mt-5 cursor-pointer">
-        {isLoding?<FaSyncAlt className="dark:text-white text-black animate-spin"/>:'Add To Cart'}
+        {isLoding?<FaSyncAlt className="dark:text-white disabled:cursor-no-drop text-black animate-spin"/>:'Add To Cart'}
       </Button>
     </>
   );

@@ -174,7 +174,7 @@ export default function Cart() {
             {/* ----------start button clear-------------  */}
             <Button
               disabled={lodingClear}
-              className="cursor-pointer mb-4   w-full bg-red-400 hover:bg-red-600 duration-[0.2s] font-bold"
+              className="cursor-pointer mb-4  disabled:cursor-no-drop  w-full bg-red-400 hover:bg-red-600 duration-[0.2s] font-bold"
               onClick={() => handleClear()}
             >
               {lodingClear ? (
@@ -248,7 +248,7 @@ export default function Cart() {
                                 "-"
                               )
                             }
-                            className=" disabled:bg-gray-700 disabled:dark:bg-gray-400 disabled:text-gray-500 disabled:dark:text-gray-500  inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full cursor-pointer focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                            className=" disabled:bg-gray-700  disabled:cursor-no-drop  disabled:dark:bg-gray-400 disabled:text-gray-500 disabled:dark:text-gray-500  inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full cursor-pointer focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                           >
                             {/* {currentCount==product.count?} */}
                             {product.count == 1 ? (
@@ -284,7 +284,7 @@ export default function Cart() {
                               )
                             }
                             // onClick={() => increment(product._id)}
-                            className="cursor-pointer   disabled:bg-gray-700 disabled:dark:bg-gray-400 p-3 disabled:text-gray-500 disabled:dark:text-gray-500 inline-flex items-center justify-center text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                            className="cursor-pointer disabled:cursor-no-drop   disabled:bg-gray-700 disabled:dark:bg-gray-400 p-3 disabled:text-gray-500 disabled:dark:text-gray-500 inline-flex items-center justify-center text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                           >
                             +
                           </button>
@@ -299,7 +299,7 @@ export default function Cart() {
                         <button
                           disabled={removeDisaple}
                           onClick={() => handleRemoveItem(product.product.id)}
-                          className="font-medium text-red-600 dark:text-red-500 hover:underline cursor-pointer disabled:bg-gray-700 p-3 disabled:text-gray-500 disabled:dark:text-gray-500"
+                          className="font-medium text-red-600 dark:text-red-500 hover:underline cursor-pointer disabled:cursor-no-drop  disabled:bg-gray-700 p-3 disabled:text-gray-500 disabled:dark:text-gray-500"
                         >
                           Remove
                         </button>
@@ -355,7 +355,7 @@ export default function Cart() {
                               "-"
                             )
                           }
-                          className=" disabled:bg-gray-700 disabled:dark:bg-gray-400 disabled:text-gray-500 disabled:dark:text-gray-500  inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full cursor-pointer focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                          className=" disabled:bg-gray-700  disabled:cursor-no-drop  disabled:dark:bg-gray-400 disabled:text-gray-500 disabled:dark:text-gray-500  inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full cursor-pointer focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                         >
                           {/* {currentCount==product.count?} */}
                           {product.count == 1 ? (
@@ -379,7 +379,7 @@ export default function Cart() {
                             )
                           }
                           // onClick={() => increment(product._id)}
-                          className="cursor-pointer   disabled:bg-gray-700 disabled:dark:bg-gray-400 p-3 disabled:text-gray-500 disabled:dark:text-gray-500 inline-flex items-center justify-center text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                          className="cursor-pointer  disabled:cursor-no-drop   disabled:bg-gray-700 disabled:dark:bg-gray-400 p-3 disabled:text-gray-500 disabled:dark:text-gray-500 inline-flex items-center justify-center text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                         >
                           +
                         </button>
@@ -389,7 +389,7 @@ export default function Cart() {
                     <button
                       disabled={removeDisaple}
                       onClick={() => handleRemoveItem(product.product.id)}
-                      className="font-medium text-red-600 dark:text-red-500 hover:underline cursor-pointer disabled:bg-gray-700 p-3 disabled:text-gray-500 disabled:dark:text-gray-500"
+                      className="font-medium text-red-600   disabled:cursor-no-drop dark:text-red-500 hover:underline cursor-pointer disabled:bg-gray-700 p-3 disabled:text-gray-500 disabled:dark:text-gray-500"
                     >
                       Remove
                     </button>

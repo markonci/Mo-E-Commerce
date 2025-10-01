@@ -5,6 +5,7 @@ import { LuMapPin } from "react-icons/lu";
 import { FaIdCard } from "react-icons/fa";
 import Image from 'next/image';
 import {  OrdersDetalisResponse } from '@/types/userorders.Type';
+import dayjs from './../../../../../../node_modules/dayjs/esm/index';
 
 export default async function USerorderdetalis({ params }:{params:Promise<{id:string}>}) {
     const { id } = await params;
@@ -46,6 +47,7 @@ export default async function USerorderdetalis({ params }:{params:Promise<{id:st
                         <p><span className='font-bold'>Delivered:</span> <span className='text-green-700 dark:text-[#c8550d]'>No</span></p>
                         <p><span className='font-bold'>Paid:</span> <span className='text-green-700 dark:text-[#c8550d]'>No</span></p>
                         <p><span className='font-bold'>Shipping:</span> <span className='text-green-700 dark:text-[#c8550d]'>{product.data[0].shippingPrice} EGP</span></p>
+                        <p><span className='font-bold'>Ordered on:</span> <span className='text-green-700 dark:text-[#c8550d]'>{dayjs(product.data[0].createdAt).format('DD/MM/YYYY')} </span></p>
                     </div>
 
                     {/* Address Info */}

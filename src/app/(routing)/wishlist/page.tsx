@@ -26,45 +26,26 @@ export default function Wishlist() {
   const [removeDisaple, setremoveDisaple] = useState<boolean>(false);
   const{myhandleWishlist}= useContext(WishlistContext)!
 
-  // //---------- start fn get cart --------------
-  //    async function handleWishlist() {
-  //   try {
-  //     // -----------start call api-----------
-  //     const data = await getProductWishlist();
-  //     // console.log(data);
+  //---------- start fn get cart --------------
+     async function handleWishlist() {
+    try {
+      // -----------start call api-----------
+      const data = await getProductWishlist();
+      // console.log(data);
 
-  //     // -----------end call api-----------
-  //     if (data.status == "success") {
-  //       setproduct(data.data);
+      // -----------end call api-----------
+      if (data.status == "success") {
+        setproduct(data.data);
 
-  //       // console.log(data);
-  //       setisLoding(false);
-  //     }
-  //   } catch (err) {
-  //     toast.error(err instanceof Error ? err.message : "cant't fetch data");
-  //     setisLoding(false);
-  //   }
-  // }
-
-async function handleWishlist() {
-  setisLoding(true);
-  try {
-    const data = await getProductWishlist();
-
-    if (data.status === "success") {
-      setproduct(data.data);
-    } else {
-      // هنا هتوصل الرسالة اللي رجعتها من الـ action
-      toast.error(data.message);
+        // console.log(data);
+        setisLoding(false);
+      }
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "cant't fetch data");
+      setisLoding(false);
     }
-  } catch (err) {
-    toast.error("Unexpected error occurred");
-  } finally {
-    setisLoding(false);
   }
-}
-
-  // //---------- end fn get cart --------------
+  //---------- end fn get cart --------------
   console.log(product);
 
   async function handleRemoveItem(id: string) {
@@ -165,7 +146,7 @@ async function handleWishlist() {
                         <Button
                           disabled={removeDisaple}
                           onClick={() => handleRemoveItem(product._id)}
-                          className="font-medium text-red-600 flex items-center bg-red-300 dark:text-red-500 hover:underline cursor-pointer disabled:bg-gray-700 p-3 disabled:text-gray-500 disabled:dark:text-gray-500"
+                          className="font-medium text-red-600 flex items-center disabled:cursor-no-drop bg-red-300 dark:text-red-500 hover:underline cursor-pointer disabled:bg-gray-700 p-3 disabled:text-gray-500 disabled:dark:text-gray-500"
                         >
                           <span className="flex items-center gap-2">
                             Remove <FaHeartBroken />
@@ -212,7 +193,7 @@ async function handleWishlist() {
                     <Button
                       disabled={removeDisaple}
                       onClick={() => handleRemoveItem(product._id)}
-                      className="font-medium w-full bg-red-300 text-red-600 dark:text-red-500 hover:underline cursor-pointer disabled:bg-gray-700 p-3 disabled:text-gray-500 disabled:dark:text-gray-500"
+                      className="font-medium w-full bg-red-300 text-red-600 dark:text-red-500 hover:underline cursor-pointer disabled:bg-gray-700 p-3  disabled:cursor-no-drop  disabled:text-gray-500 disabled:dark:text-gray-500"
                     >
                       Remove
                     </Button>

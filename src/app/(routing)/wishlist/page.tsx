@@ -26,26 +26,45 @@ export default function Wishlist() {
   const [removeDisaple, setremoveDisaple] = useState<boolean>(false);
   const{myhandleWishlist}= useContext(WishlistContext)!
 
-  //---------- start fn get cart --------------
-     async function handleWishlist() {
-    try {
-      // -----------start call api-----------
-      const data = await getProductWishlist();
-      // console.log(data);
+  // //---------- start fn get cart --------------
+  //    async function handleWishlist() {
+  //   try {
+  //     // -----------start call api-----------
+  //     const data = await getProductWishlist();
+  //     // console.log(data);
 
-      // -----------end call api-----------
-      if (data.status == "success") {
-        setproduct(data.data);
+  //     // -----------end call api-----------
+  //     if (data.status == "success") {
+  //       setproduct(data.data);
 
-        // console.log(data);
-        setisLoding(false);
-      }
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "cant't fetch data");
-      setisLoding(false);
+  //       // console.log(data);
+  //       setisLoding(false);
+  //     }
+  //   } catch (err) {
+  //     toast.error(err instanceof Error ? err.message : "cant't fetch data");
+  //     setisLoding(false);
+  //   }
+  // }
+
+async function handleWishlist() {
+  setisLoding(true);
+  try {
+    const data = await getProductWishlist();
+
+    if (data.status === "success") {
+      setproduct(data.data);
+    } else {
+      // هنا هتوصل الرسالة اللي رجعتها من الـ action
+      toast.error(data.message);
     }
+  } catch (err) {
+    toast.error("Unexpected error occurred");
+  } finally {
+    setisLoding(false);
   }
-  //---------- end fn get cart --------------
+}
+
+  // //---------- end fn get cart --------------
   console.log(product);
 
   async function handleRemoveItem(id: string) {

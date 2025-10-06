@@ -112,10 +112,10 @@ export default async function Productdetalis({ params }:{params:Promise<{id:stri
                       <Image
                         src={
                           product.images[2]
-                            || product.images[2]
-                            || product.images[0]
-                            || product.images[0]
-                            || product.imageCover
+                            ? product.images[2]
+                            : product.images[0]
+                            ? product.images[0]
+                            : product.imageCover
                         }
                         // hna b2olo lw al img 2 mwgoda a3rdha msh mogadoa a3rd img0 tb lw im 0 mwgoda a3rdha msh mogada a3rd img cover
                           width={500}

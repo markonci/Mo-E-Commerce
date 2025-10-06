@@ -3,7 +3,7 @@
 import { restpasswordType } from "@/schema/(rest Password)/restpassword.schema"
 
 export default async function restPassword(value:restpasswordType) {
-    const res=await fetch(`${process.env.ApI}/auth/resetPassword`,{
+    const res=await fetch(`${process.env.API}/auth/resetPassword`,{
         method:'PUT',
         headers:{
             'Content-Type': 'application/json'

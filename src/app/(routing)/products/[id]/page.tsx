@@ -74,10 +74,7 @@ export default async function Productdetalis({ params }:{params:Promise<{id:stri
 
 
     // ('w kan fe error mkantsh almontagat btzhar fs btdef kan 3ep fe astrad al link')
-const getFullImageUrl = (img: string | undefined) => {
-  if (!img) return '/placeholder.jpg'; // صورة افتراضية لو مفيش
-  return img.startsWith('http') ? img : `https://ecommerce.routemisr.com${img}`;
-};
+
 
   return (
     <>
@@ -104,7 +101,7 @@ const getFullImageUrl = (img: string | undefined) => {
                     lma a hover 3la nfs almkan alt2ser y7sel 3la altenen fe nfs alsanya  */}
                       {/* الصورة الأساسية */}
                       <Image
-                        src={getFullImageUrl(product.imageCover)}
+                        src={product.imageCover}
                         alt={product.title}
                         className="w-full h-auto  transition-opacity duration-300 group-hover:opacity-0"
                         width={500}

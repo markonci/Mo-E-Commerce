@@ -78,7 +78,9 @@ export default function Checkout() {
           toast.success("The cash payment process was completed successfully.", {
             duration: 3000,
           });
-          router.push('/allorders')
+          // router.push('/allorders')
+          window.location.href = '/allorders'
+          // (`علشان يعمل ريلود فا يمسح من الكارد`)
           getUserCart()
         }
       } catch (err) {

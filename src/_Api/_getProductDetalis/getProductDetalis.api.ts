@@ -17,7 +17,7 @@ interface ProductResponse {
 }
 
 export default async function getProductDetalis( id:string ):Promise<ProductResponse> {
-  const res = await fetch(`https://ecommerce.routemisr.com/api/v1/products/${id}`);
+  const res = await fetch(`${process.env.API}/products/${id}`);
   const data =  await res.json();
 //   console.log(data);
   return data;

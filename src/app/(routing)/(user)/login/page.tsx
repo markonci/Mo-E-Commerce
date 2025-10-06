@@ -13,7 +13,7 @@ import styled from "styled-components";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
-import {  useRouter } from "next/navigation";
+// import {  useRouter } from "next/navigation";
 
 import { IoMdSync } from "react-icons/io";
 import { sgininschema, sgininSchemaType } from "@/schema/sginIn.schema";
@@ -22,7 +22,7 @@ import {signIn} from 'next-auth/react'
 export default function Login() {
   const [isLoding, setisLoding] = useState(false);
 
-  const router = useRouter();
+  // const router = useRouter();
   // start use form
   const form = useForm<sgininSchemaType>({
     // hna adnhla al type dh 3lshan m2darsh azwod 7aga tany 8er aly fel al schema
@@ -64,10 +64,10 @@ export default function Login() {
         // console.log(res);
         // kont 2ader a3ml if 3la aktr mn 7aga b2a 3ady 
         // router.push('/')
-        router.replace("/");
+        // router.replace("/");
         // (`استخدمت دي علشان لما اجاي اتنقل واعوز ارجع ملاقيش حاجة يرجع عليها بيمسح الهيستوري كاني لسة 
         //   فاتح علي الهوم`)
-        // window.location.href='/'
+        window.location.href='/'
         // (`بس استخدمت اللوكشين علشان يعمل ريلزد فا يرجع يشغل يوز افيكت بتاعه ارقام الكارد والويش ليست لومكنش في ارقام كنا 
         //   اسخدمنا روتر ريبلس افضل
         //   `

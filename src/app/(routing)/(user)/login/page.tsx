@@ -64,10 +64,15 @@ export default function Login() {
         // console.log(res);
         // kont 2ader a3ml if 3la aktr mn 7aga b2a 3ady 
         // router.push('/')
-        router.replace("/");
+        // router.replace("/");
         // (`استخدمت دي علشان لما اجاي اتنقل واعوز ارجع ملاقيش حاجة يرجع عليها بيمسح الهيستوري كاني لسة 
         //   فاتح علي الهوم`)
-        
+        window.location.href='/'
+        // (`بس استخدمت اللوكشين علشان يعمل ريلزد فا يرجع يشغل يوز افيكت بتاعه ارقام الكارد والويش ليست لومكنش في ارقام كنا 
+        //   اسخدمنا روتر ريبلس افضل
+        //   `
+          
+        // )
         setisLoding(false);
         
         form.reset()

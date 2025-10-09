@@ -34,6 +34,8 @@ export default function ProductdeatlisSwiper({data}:ProductdeatlisSwiperProps) {
                 // hatena aw 3lshan fo2 b2olo mmkn tgelk aw l2 fa lazem 2olo lw m2agtalgsh mslan mto7atsh 7aga
                 width={500}
                 height={500}
+                  unoptimized
+
               />
               
             </SwiperSlide>

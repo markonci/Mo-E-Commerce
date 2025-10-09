@@ -106,6 +106,8 @@ export default async function Productdetalis({ params }:{params:Promise<{id:stri
                         className="w-full h-auto  transition-opacity duration-300 group-hover:opacity-0"
                         width={500}
                         height={500}
+                          unoptimized
+
                       />
 
                       {/* الصورة اللي هتظهر مع الهوفر */}

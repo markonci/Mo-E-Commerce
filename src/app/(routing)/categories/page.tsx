@@ -31,6 +31,8 @@ export default async function Categories() {
                   height={150}
                   className="object-cover w-full h-full rounded-md "
                    priority
+                    unoptimized
+
                   />
                 </CardContent>
                 <CardFooter className=' p-3 font-bold dark:bg-black bg-gray-400 text-white dark:text-yellow-300'>

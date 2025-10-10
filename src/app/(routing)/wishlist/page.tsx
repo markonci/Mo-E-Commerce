@@ -174,7 +174,7 @@ export default function Wishlist() {
                     height={100}
                     alt={product.title}
                     unoptimized
-                    className="rounded-lg mx-auto sm:mx-0"
+                    className="rounded-lg mx-auto sm:mx-0 w-auto h-auto"
                   />
                   <div className="flex-1 mt-4 sm:mt-0 sm:ml-4">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">

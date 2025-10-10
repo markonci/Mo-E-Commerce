@@ -125,6 +125,7 @@ export default function Wishlist() {
                           width={120}
                           height={120}
                           alt={product.title}
+                          unoptimized
                           className="rounded-lg w-auto h-auto"
                         />
                       </td>
@@ -172,6 +173,7 @@ export default function Wishlist() {
                     width={100}
                     height={100}
                     alt={product.title}
+                    unoptimized
                     className="rounded-lg mx-auto sm:mx-0"
                   />
                   <div className="flex-1 mt-4 sm:mt-0 sm:ml-4">

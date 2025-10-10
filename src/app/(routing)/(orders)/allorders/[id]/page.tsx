@@ -86,7 +86,7 @@ export default async function USerorderdetalis({ params }:{params:Promise<{id:st
                             {products.map((product) => (
                                 <tr key={product.product.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <td className="p-4">
-                                        <Image src={product.product.imageCover} alt={product.product.title} width={120} height={120} />
+                                        <Image src={product.product.imageCover} alt={product.product.title} width={120} height={120} unoptimized/>
                                     </td>
                                     <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
                                         {product.product.title.length > 30
@@ -105,7 +105,7 @@ export default async function USerorderdetalis({ params }:{params:Promise<{id:st
                 <div className="grid grid-cols-1 gap-4 md:hidden pt-12">
                     {products.map((product) => (
                         <div key={product.product.id} className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-4 flex gap-4 items-center">
-                            <Image src={product.product.imageCover} alt={product.product.title} width={80} height={80} className="rounded" />
+                            <Image src={product.product.imageCover} alt={product.product.title} width={80} height={80} className="rounded" unoptimized />
                             <div className="flex-1">
                                 <h3 className="font-bold text-gray-900 dark:text-white">
                                     {product.product.title.length > 20

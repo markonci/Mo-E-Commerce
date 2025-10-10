@@ -224,6 +224,7 @@ export default function Cart() {
                           width={120}
                           height={120}
                           alt={product.product.title}
+                          unoptimized
                           className="rounded-lg w-auto h-auto"
                         />
                       </td>
@@ -327,6 +328,7 @@ export default function Cart() {
                     width={100}
                     height={100}
                     alt={product.product.title}
+                    unoptimized
                     className="rounded-lg mx-auto sm:mx-0 w-auto h-auto"
                   />
                   <div className="flex-1 mt-4 sm:mt-0 sm:ml-4">

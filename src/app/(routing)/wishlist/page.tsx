@@ -126,7 +126,7 @@ export default function Wishlist() {
                           height={120}
                           alt={product.title}
                           unoptimized
-                          className="rounded-lg w-auto h-auto"
+                          className="rounded-lg "
                         />
                       </td>
                       <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">

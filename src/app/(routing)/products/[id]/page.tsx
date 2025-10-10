@@ -123,6 +123,7 @@ export default async function Productdetalis({ params }:{params:Promise<{id:stri
                           width={500}
                       height={500}
                         alt={product.title}
+                        unoptimized
                         className="absolute h-auto  top-0 left-0 w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                       />
                     </CardTitle>
